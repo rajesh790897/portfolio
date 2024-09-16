@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Portfolio - Rajesh Mondal</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+header .btn {
+    background: #ff5733;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: #333;
+}
+
+#about img {
+    width: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.skill {
+    width: 20%;
+}
+
+.skill h3 {
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    background: #ddd;
+    border-radius: 25px;
+    overflow: hidden;
+    height: 15px;
+}
+
+.progress {
+    background: #28a745;
+    height: 100%;
+}
+
+.project-item {
+    margin: 40px auto;
+    text-align: left;
+    width: 60%;
+}
+
+.project-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.project-item h3 {
+    margin-top: 10px;
+}
+
+.project-item .btn {
+    background: #007bff;
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#contact form {
+    margin: 0 auto;
+    width: 60%;
+}
+
+#contact input, #contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#contact button {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .social-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    header h1 {
+        font-size: 32px;
+    }
+
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .skill {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .project-item {
+        width: 90%;
+    }
+
+    #contact form {
+        width: 90%;
+    }
+}
+
+    </style>
+    <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    </script>
+</head>
+<body>
+    <!-- Home Section -->
+    <header id="home">
+        <div class="hero">
+            <h1>Hi, I'm Rajesh Mondal</h1>
+            <p>Full Stack Web Developer</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a full stack developer with experience in both front-end and back-end development. I specialize in creating scalable, secure, and efficient web applications.</p>
+        <img src="Profile.jpg" alt="Rajesh Mondal">
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <h3>HTML</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 90%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>CSS</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>JavaScript</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 90%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>PHP</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 95%"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-item">
+            <img src="img/weather.png" alt="Weather Dashboard Project">
+            <h3>Weather Dashboard</h3>
+            <p>A real-time weather dashboard with dynamic data.</p>
+            <a href="https://github.com/rajesh790897/Weather-Dashboard" class="btn">View on GitHub</a>
+        </div>
+        <div class="project-item">
+            <img src="img/calculator.png" alt="Advanced Calculator Project">
+            <h3>Advanced Calculator</h3>
+            <p>A fully functional calculator with advanced features.</p>
+            <a href="https://github.com/rajesh790897/Calculator" class="btn">View on GitHub</a>
+        </div>
+        <div class="project-item">
+            <img src="img/todo.png" alt="To-Do List Project">
+            <h3>To-Do List</h3>
+            <p>An interactive to-do list with priority setting and reminders.</p>
+            <a href="https://github.com/yourusername/todo-list" class="btn">View on GitHub</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="/send-email" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Rajesh Mondal. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="https://github.com/rajesh790897">GitHub</a>
+            <a href="https://linkedin.com/in/rajesh-mondal26">LinkedIn</a>
+        </div>
+    </footer>
+
+</body>
+</html>
